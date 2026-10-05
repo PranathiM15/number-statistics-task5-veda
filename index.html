@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NOVA — Number Statistics Lab</title>
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+  <div class="noise"></div>
+
+  <header class="topbar">
+    <div class="brand">
+      <div class="brand-mark">N</div>
+      <div>
+        <span class="eyebrow">PYTHON • TASK 5</span>
+        <h1>NOVA <span>Number Statistics Lab</span></h1>
+      </div>
+    </div>
+    <div class="status"><i></i> PYTHON ENGINE READY</div>
+  </header>
+
+  <main class="shell">
+    <section class="hero">
+      <div>
+        <p class="kicker">DATA OBSERVATORY / 05</p>
+        <h2>Turn a simple list into a <em>clear statistical snapshot.</em></h2>
+        <p class="intro">
+          Enter whole numbers and let the Python engine separate even and odd values,
+          then calculate the largest and smallest numbers.
+        </p>
+      </div>
+      <div class="orbit">
+        <span>EVEN</span>
+        <strong>÷2</strong>
+        <span>ODD</span>
+      </div>
+    </section>
+
+    <section class="workspace">
+      <div class="input-panel card">
+        <div class="card-head">
+          <div>
+            <p class="section-label">01 / INPUT STREAM</p>
+            <h3>Feed the numbers</h3>
+          </div>
+          <span class="pill">MANUAL DATA</span>
+        </div>
+
+        <label for="numbers">Your numerical dataset</label>
+        <textarea id="numbers" spellcheck="false"
+          placeholder="Example: 12, 7, 25, 4, 18, 9, 31"></textarea>
+
+        <div class="examples">
+          <span>Try:</span>
+          <button data-set="12, 7, 25, 4, 18, 9, 31">Balanced</button>
+          <button data-set="-8, 3, 14, -2, 19, 6, 1">Mixed</button>
+          <button data-set="50, 20, 80, 10, 40">Simple</button>
+        </div>
+
+        <div class="actions">
+          <button id="analyzeBtn" class="primary">Analyze Dataset <span>→</span></button>
+          <button id="clearBtn" class="secondary">Clear</button>
+        </div>
+
+        <p id="message" class="message"></p>
+      </div>
+
+      <div class="results-panel">
+        <div class="card stat-card accent">
+          <p class="section-label">02 / RANGE</p>
+          <div class="range">
+            <div><small>SMALLEST</small><strong id="smallest">—</strong></div>
+            <div class="arrow">→</div>
+            <div><small>LARGEST</small><strong id="largest">—</strong></div>
+          </div>
+        </div>
+
+        <div class="stats-grid">
+          <div class="card mini"><span>VALUES</span><strong id="count">—</strong></div>
+          <div class="card mini"><span>SUM</span><strong id="sum">—</strong></div>
+          <div class="card mini"><span>AVERAGE</span><strong id="average">—</strong></div>
+        </div>
+
+        <div class="card lists-card">
+          <p class="section-label">03 / CLASSIFICATION</p>
+          <div class="list-columns">
+            <div>
+              <div class="list-title even-title"><span></span> EVEN NUMBERS</div>
+              <div id="evenList" class="number-list"><span class="empty">Awaiting analysis</span></div>
+            </div>
+            <div>
+              <div class="list-title odd-title"><span></span> ODD NUMBERS</div>
+              <div id="oddList" class="number-list"><span class="empty">Awaiting analysis</span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="logic-strip">
+      <div><b>Modulo</b><span>n % 2 == 0 → even</span></div>
+      <div><b>Loop</b><span>process every value</span></div>
+      <div><b>Built-ins</b><span>max() + min()</span></div>
+    </section>
+
+    <footer>
+      <span>NOVA / PYTHON NUMERICAL PROCESSING</span>
+      <span>VEDA TECHNOLOGY • TASK 5</span>
+    </footer>
+  </main>
+
+  <script src="/script.js"></script>
+</body>
+</html>
